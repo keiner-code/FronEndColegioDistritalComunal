@@ -1,0 +1,58 @@
+
+.institucion_content{
+  background-color: #e3f3f3;
+  display: flex;
+  justify-content: center;
+  margin-block-start: 1rem;
+  .institucion_container{
+    display: grid;
+    grid-template: repeat(2,1fr) /repeat(2, 1fr);
+    width: 60%;
+    h1{
+      color: grey;
+    }
+    .institucion_mision{
+      padding: .5rem;
+      p{
+        font-size: 1.1rem;
+      }
+      ul{
+        li{
+          color: gray;
+          margin-block: 1rem;
+        }
+      }
+    }
+    .institucion_vision{
+      padding: .5rem;
+      ul{
+        li{
+          color: gray;
+          margin-block: 1rem;
+        }
+      }
+    }
+    .institucion_historia{
+      padding: .5rem;
+      strong{
+        display: block;
+        text-align: end;
+        margin-inline-end: 1.5rem;
+      }
+      .institucion_content{
+        img{
+          width: 10rem;
+        }
+      }
+    }
+    .institucion_creencias{
+      .content_creencias{
+        margin-block-end: 1rem;
+        border: 1px solid gray;
+        border-radius: .5em;
+        background-color: white;
+        padding: .5rem;
+      }
+    }
+  }
+}

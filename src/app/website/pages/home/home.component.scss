@@ -1,0 +1,26 @@
+*{
+  background-color: #e3f3f3;
+}
+.home{
+  display: flex;
+  justify-content: center;
+}
+.home_img{
+  display: flex;
+  justify-content: center;
+  margin-block-start: 2rem;
+  margin-inline-end: 6rem;
+  img{
+    width: 58%;
+  }
+}
+@media (max-width: 601px) {
+  .home_img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+}

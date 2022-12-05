@@ -1,0 +1,38 @@
+.notas_container{
+  display: flex;
+  justify-content: center;
+  margin-block-start: 1rem;
+  background-color: #e3f3f3;
+  .notas{
+    width: 50%;
+    margin-block-start: 2rem;
+    .notas_search{
+      display: flex;
+      align-items: center;
+      border: 1px solid rgb(211, 207, 207);
+      border-radius: .5em;
+      background-color: white;
+      label{
+        margin-inline-start: 5rem;
+        font-size: 1.3rem;
+        margin-inline-end: .3rem;
+      }
+      input{
+        width: 20%;
+        height: 1.5rem;
+        border-radius: .3em;
+        outline: none;
+        border: 1px solid grey;
+      }
+      button{
+        height: 1.8rem;
+        margin-inline-start: .2rem;
+        background-color: #89a5a5;
+        border: none;
+        cursor: pointer;
+        color: white;
+        border-radius: .3em;
+      }
+    }
+  }
+}

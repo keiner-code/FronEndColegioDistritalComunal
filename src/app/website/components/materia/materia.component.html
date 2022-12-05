@@ -1,0 +1,25 @@
+<div class="materia_container">
+  <div class="materia">
+    <div class="materia_search">
+      <img src="https://www.colegioespiritusanto.edu.co/images/pages/logo-educamos.png" alt="">
+      <p >Precione Para Mostrar Todas Las Materias</p>
+      <button (click)="SearchCourse()">Ver Materias</button>
+    </div>
+  </div>
+</div>
+
+<div class="table_materia" *ngIf="tableMateria">
+  <table *ngIf="materias">
+    <tr>
+      <th>Id</th>
+      <th>Materia</th>
+      <th>Descripcion</th>
+    </tr>
+
+      <tr *ngFor="let mate of materias">
+        <td>{{mate.id}}</td>
+        <td>{{mate.materia}}</td>
+        <td>{{mate.descripcion}}</td>
+      </tr>
+  </table>
+</div>

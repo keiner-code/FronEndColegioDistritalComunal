@@ -1,0 +1,141 @@
+.formato_container{
+  display: flex;
+  justify-content: center;
+  background-color: #e3f3f3;
+  .formato{
+    width: 50%;
+    margin-block-start: 2rem;
+    .formato_search{
+      display: flex;
+      align-items: center;
+      border: 1px solid rgb(211, 207, 207);
+      border-radius: .5em;
+      background-color: white;
+      p{
+        font-size: 1.1rem;
+        color: gray;
+        margin-inline-end: 1rem;
+        font-weight: 400;
+      }
+      button{
+        height: 1.8rem;
+        margin-inline-start: .2rem;
+        background-color: #89a5a5;
+        border: none;
+        cursor: pointer;
+        color: white;
+        border-radius: .3em;
+      }
+    }
+  }
+}
+
+.table_formato{
+  display: flex;
+  justify-content: center;
+  background-color: #e3f3f3;
+  padding-block-start: 2rem;
+}
+
+table {
+  background-color: rgb(255, 255, 255);
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+
+  td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    :nth-child(2){
+      i{
+        color: rgb(6, 141, 6);
+      }
+    }
+    :nth-child(3){
+    i{
+      color: rgb(231, 82, 23);
+    }
+  }
+  button{
+    background-color:  rgb(107, 107, 251);
+    border: none;
+    cursor: pointer;
+    padding: .5rem;
+    color: white;
+    border: none;
+    border-radius: .3em;
+    i{
+      color: blue;
+      font-size: 1.4rem;
+    }
+
+  }
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+}
+
+.list_estudents{
+  background-color: #e3f3f3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .list_content{
+    margin-block: 1rem;
+    border-radius: .3em;
+    border: 1px solid grey;
+    padding: .3rem;
+    width: 50%;
+    .list_header{
+
+      .list_header_img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+          color: #246363;
+        }
+        img{
+          width: 9rem;
+          margin-bottom: 1rem;
+        }
+      }
+      table{
+        td,th{
+          border: 1px solid;
+        }
+      }
+    }
+    table{
+      width: 100%;
+      border: 1px solid;
+      td,th{
+      border-collapse: collapse;
+      border: 1px solid;
+
+      }
+    }
+  }
+}
+.generate_List{
+
+  background-color: #e3f3f3;
+  .generate_button{
+    display: flex;
+    justify-content: center;
+    width: 54%;
+    button{
+      padding: .5rem;
+      color: white;
+      border: none;
+      color: white;
+      background-color: #6cceaa;
+      border-radius: .3rem;
+      cursor: pointer;
+    }
+  }
+}

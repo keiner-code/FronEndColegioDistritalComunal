@@ -1,0 +1,37 @@
+<div class="table_notas">
+  <table *ngIf="notasContent">
+    <tr>
+      <th>Materia</th>
+      <th>Primer Periodo</th>
+      <th>Segundo Periodo</th>
+      <th>Tercer Periodo</th>
+      <th>Total</th>
+      <th *ngIf="userRol != 'estudiante'">Accion</th>
+    </tr>
+
+    <tr *ngFor="let user of notasContent?.materia; let indice = index">
+      <span style="display: none">{{ indice + 1 }}</span>
+      <td>{{ user.materia }}</td>
+      <td>{{ notasContent.notas[indice].nota1 }}</td>
+      <td>{{ notasContent.notas[indice].nota2 }}</td>
+      <td>{{ notasContent.notas[indice].nota3 }}</td>
+      <td *ngIf="notasContent.notas">
+        {{
+          notaTotal(
+            notasContent.notas[indice].nota1,
+            notasContent.notas[indice].nota2,
+            notasContent.notas[indice].nota3
+          ) |  number
+        }}
+      </td>
+      <td *ngIf="userRol != 'estudiante'">
+        <button (click)="enviarIdNotas(notasContent.notas[indice].id)"><i class="fa-solid fa-file-pen"></i></button>
+        <button *ngIf="userRol == 'director'"><i class="fa-sharp fa-solid fa-trash"></i></button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
+

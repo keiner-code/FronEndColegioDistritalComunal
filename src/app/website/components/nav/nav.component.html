@@ -1,0 +1,43 @@
+<div class="nav_container">
+  <div class="nav">
+
+  <div class="nav_img">
+    <img src="https://www.colegioespiritusanto.edu.co/images/logo_titulo.png">
+  </div>
+
+  <div class="nav_ul">
+    <ul>
+      <li routerLinkActive="active-link" ><a routerLink="/home">Inicio</a></li>
+      <li routerLinkActive="active-link" ><a routerLink="/interes">De Interes</a></li>
+      <li routerLinkActive="active-link" ><a routerLink="/institucion">Institucion</a></li>
+      <li routerLinkActive="active-link" *ngIf="profile"><a routerLink="/plataforma">Notas</a></li>
+      <li routerLinkActive="active-link" *ngIf="profile?.rol == 'director'"><a routerLink="/control notas">Colegio</a></li>
+      <li routerLinkActive="active-link" *ngIf="profile"><a routerLink="/boletines">Boletines</a></li>
+      <li routerLinkActive="active-link" *ngIf="profile?.rol == 'profesor' || profile?.rol == 'director'"><a routerLink="/formatos">Lista Alumnos</a></li>
+      <li routerLinkActive="active-link"><a routerLink="/info">Info</a></li>
+      <li routerLinkActive="active-link" class="social_fab">
+        <a routerLink="/login">
+          <i class="fa-sharp fa-solid fa-user-tie"></i>
+          <p *ngIf="profile; else elseBlock">{{profile.email}} <button (click)="closeSession()">Cerrar Session</button></p>
+          <ng-template #elseBlock><p>Iniciar Session</p></ng-template>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="nav_hamburger">
+    <button (click)="activeMenu()"><i class="fa-solid fa-bars"></i></button>
+    <div class="nav_menu" [class.active]="activateMenu">
+      <ul>
+        <li><a href="http://">Inicio</a></li>
+        <li><a href="http://">De Interes</a></li>
+        <li><a href="http://">Institucion</a>
+        </li>
+        <li><a href="http://">Plataformas</a></li>
+        <li><a href="http://">Documentos</a></li>
+        <li><a href="http://">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,23 @@
+<div class="curso_container">
+  <div class="curso">
+    <div class="curso_search">
+      <img src="https://www.colegioespiritusanto.edu.co/images/pages/logo-educamos.png" alt="">
+      <p >Precione Para Mostrar Todos Los Cursos</p>
+      <button (click)="SearchCourse()">Ver Cursos</button>
+    </div>
+  </div>
+</div>
+
+<div class="table_curso" *ngIf="showTable">
+  <table *ngIf="cursos">
+    <tr>
+      <th>Id</th>
+      <th>Nombre Del Curso</th>
+    </tr>
+
+      <tr *ngFor="let curs of cursos">
+        <td>{{curs.id}}</td>
+        <td>{{curs.nombre}}</td>
+      </tr>
+  </table>
+</div>

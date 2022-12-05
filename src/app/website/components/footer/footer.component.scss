@@ -1,0 +1,37 @@
+.footer_container{
+  padding-block-start: 2rem;
+  background-color: #e3f3f3;
+  .footer_carrousel{
+    img{
+      width: 14.7rem;
+    }
+  }
+  .footer_info{
+    display: flex;
+    justify-content: space-around;
+
+    .footer_colaborations{
+      border-collapse: collapse;
+      tr{
+          td{
+          a{
+            text-decoration: none;
+            color: rgb(82, 82, 245);
+          }
+        }
+      }
+    }
+    .footer_social{
+      i{
+        font-size: 2rem;
+        margin-inline-start: .5rem;
+      }:nth-child(2){
+        color: blue;
+      }:nth-child(3){
+        color: rgb(98, 98, 253);
+      }:nth-child(4){
+        color: rgb(255, 85, 85);
+      }
+    }
+  }
+}

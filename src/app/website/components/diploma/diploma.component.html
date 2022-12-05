@@ -1,0 +1,55 @@
+<div class="materia_container">
+  <div class="materia">
+    <div class="materia_search">
+      <img src="https://www.colegioespiritusanto.edu.co/images/pages/logo-educamos.png" alt="">
+      <p>Cedula Del Estudiante</p>
+      <input
+        type="text"
+        placeholder="Cedula Del Estudiante"
+        #cedula
+      >
+      <button (click)="SearchStudent(cedula.value)">Buscar Estudiante</button>
+    </div>
+  </div>
+</div>
+
+<div class="boletin_escolar" *ngIf="showBoletin">
+  <div class="boletin_container">
+
+    <div class="boletin_content">
+      <h1>Colegio distrital De Bachillerato</h1>
+      <p>NOMBRE: {{user.nombre.toUpperCase()}} {{user.apellido.toUpperCase()}}</p>
+      <p>CEDULA: {{user.cedula}}</p>
+      <p>CURSO: {{user.materia[1].horario[0].curso.nombre}}</p>
+      <p>AÑO: 2022</p>
+    </div>
+
+    <div class="boletin_notas">
+      <div *ngFor="let materia of user.materia; let cont = index">
+        <p style="display: none;">{{cont +1}}</p>
+        <p>{{materia.materia.toUpperCase()}}</p>
+        <p>{{notasTotal(user.notas[cont]) | number}}</p>
+      </div>
+    </div>
+
+    <div class="boletin_aside">
+      <textarea placeholder="Por Favor Escriba Aqui Un Comentario" cols="30" rows="10"></textarea>
+      <div class="boletin_info_nota">
+        <p>Excelente</p>
+        <p>4-5</p>
+        <p>Notable</p>
+        <p>3-4</p>
+        <p>Aprovado</p>
+        <p>3</p>
+        <p>Desaprobado</p>
+        <p>1-2.9</p>
+    </div>
+  </div>
+ </div>
+</div>
+
+<div class="boletin_botton" *ngIf="showBoletin">
+  <div class="bottom">
+    <button (click)="generateBoletin()">Generar Boletin</button>
+  </div>
+</div>

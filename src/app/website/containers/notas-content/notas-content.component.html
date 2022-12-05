@@ -1,0 +1,41 @@
+<div class="modal_nota" *ngIf="showModal">
+  <div class="modal_content">
+    <button (click)="closeModal()">X</button>
+    <h2>Modificar Nota</h2>
+    <form [formGroup]="form" (ngSubmit)="update($event)">
+
+      <div class="form-item">
+        <label for="nota1">Nota 1</label>
+        <input
+          type="text"
+          placeholder="Ingrese La Nota"
+          formControlName="nota1"
+        >
+      </div>
+
+      <div class="form-item">
+        <label for="nota1">Nota 2</label>
+        <input
+          type="text"
+          placeholder="Ingrese La Nota"
+          formControlName="nota2"
+        >
+      </div>
+
+      <div class="form-item">
+        <label for="nota1">Nota 3</label>
+        <input
+          type="text"
+          placeholder="Ingrese La Nota"
+          formControlName="nota3"
+        >
+      </div>
+
+      <div class="form-botton">
+        <button>Modificar Nota</button>
+      </div>
+    </form>
+  </div>
+</div>
+<app-notas (idEvent)="searchUser($event)"></app-notas>
+<app-tabla-notas [notasContent]="user" (idNota)="editarNota($event)"></app-tabla-notas>

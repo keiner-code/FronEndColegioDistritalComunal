@@ -1,0 +1,123 @@
+<div class="colegio">
+  <div class="colegio_crud">
+
+    <div class="curso">
+      <h2>Crear Curso</h2>
+      <label for="">Nombre Del Curso</label>
+      <input class="clearInput" #name type="text" placeholder="Ingrese El nombre Del curso">
+      <button (click)="createCurso({nombre: name.value})">Crear</button>
+      <div class="register">
+        <p>Link Para Registrar Usuarios</p>
+        <a routerLink="/registrarse">Registrarse</a>
+      </div>
+    </div>
+
+    <div class="materia">
+      <h2>Crear Materia</h2>
+      <form [formGroup]="formMateria" (ngSubmit)="createMateria($event)">
+        <div class="form_item">
+          <label for="materia">Materia</label>
+          <input
+            type="text"
+            placeholder="Ingrese La Materia"
+            formControlName="materia"
+          >
+        </div>
+
+        <div class="form_item">
+          <label for="descripcion">Descripcion</label>
+          <textarea
+            cols="30" rows="5"
+            formControlName="descripcion"
+            ></textarea>
+        </div>
+
+        <div class="form_item">
+          <label for="alumnoIds">IDs De Los Alumnos</label>
+          <input
+            type="text"
+            placeholder="1,4,2,6,3"
+            formControlName="usuarios"
+          >
+        </div>
+
+        <div class="form_item">
+          <label for="profesorId">Id Del Profesor</label>
+          <input
+            type="number"
+            placeholder="ingrese el id del profesor"
+            formControlName="profesorId"
+          >
+        </div>
+
+        <div class="form_item_button">
+          <button
+            type="submit"
+            [disabled]="formMateria.invalid">
+            Crear Materia
+        </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="horario">
+      <h2>Crear Horario</h2>
+      <form [formGroup]="formHorario" (ngSubmit)="createHorario($event)">
+        <div class="form_item">
+          <label for="dia">Dia</label>
+          <input
+            type="text"
+            placeholder="Ingrese El Dia"
+            formControlName="dia"
+          >
+        </div>
+
+        <div class="form_item">
+          <label for="horaInicio">Hora De Inicio</label>
+          <input
+            type="text"
+            placeholder="Ingrese La Hora De Inicio"
+            formControlName="horaInicio"
+          >
+        </div>
+
+        <div class="form_item">
+          <label for="horaFin">Hora De Terminacion</label>
+          <input
+            type="text"
+            placeholder="Ingrese La Que Termina"
+            formControlName="horaFin"
+          >
+        </div>
+
+        <div class="form_item">
+          <label for="materiaId">Id De La Materia</label>
+          <input
+            type="number"
+            placeholder="Ingrese El Id De La Materia"
+            formControlName="materiaId"
+          >
+        </div>
+
+        <div class="form_item">
+          <label for="cursoId">Id Del Curso</label>
+          <input
+            type="number"
+            placeholder="Ingrese El Id Del Curso"
+            formControlName="cursoId"
+          >
+        </div>
+
+        <div class="form_item_button">
+          <button
+            type="submit"
+            [disabled]="formHorario.invalid">
+            Crear Horario
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>

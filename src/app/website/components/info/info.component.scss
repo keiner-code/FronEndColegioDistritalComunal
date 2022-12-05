@@ -1,0 +1,25 @@
+.info_content{
+  .info_content_img{
+    img{
+      width: 100%;
+    }
+  }
+  h3{
+    :hover{
+      color: rgb(203, 201, 201);
+    }
+    a{
+      text-decoration: none;
+      color: gray;
+    }
+  }
+  button {
+    width: 40%;
+    height: 2rem;
+    background-color: #46acbb;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: .5em;
+  }
+}

@@ -1,0 +1,78 @@
+.materia_container{
+  display: flex;
+  justify-content: center;
+  background-color: #e3f3f3;
+  .materia{
+    width: 50%;
+    margin-block-start: 2rem;
+    .materia_search{
+      display: flex;
+      align-items: center;
+      border: 1px solid rgb(211, 207, 207);
+      border-radius: .5em;
+      background-color: white;
+      p{
+        font-size: 1.1rem;
+        color: gray;
+        margin-inline-end: 1rem;
+        font-weight: 400;
+      }
+      button{
+        height: 1.8rem;
+        margin-inline-start: .2rem;
+        background-color: #89a5a5;
+        border: none;
+        cursor: pointer;
+        color: white;
+        border-radius: .3em;
+      }
+    }
+  }
+}
+
+.table_materia{
+  display: flex;
+  justify-content: center;
+  background-color: #e3f3f3;
+  padding-block-start: 2rem;
+}
+
+table {
+  background-color: rgb(255, 255, 255);
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+
+  td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    :nth-child(2){
+      i{
+        color: rgb(6, 141, 6);
+      }
+    }
+    :nth-child(3){
+    i{
+      color: rgb(231, 82, 23);
+    }
+  }
+  button{
+    background-color:  transparent;
+    border: none;
+    cursor: pointer;
+    margin-inline-start: 1rem;
+    i{
+      color: blue;
+      font-size: 1.4rem;
+    }
+
+  }
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+}
+

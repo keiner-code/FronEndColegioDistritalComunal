@@ -1,0 +1,25 @@
+<div class="login-content">
+  <div class="main">
+<div class="signup">
+  <form [formGroup]="form" (ngSubmit)="register($event)">
+    <img src="https://www.colegioespiritusanto.edu.co/images/logo_titulo.png" alt="">
+    <input type="text" placeholder="Nombre" matInput formControlName="nombre">
+    <input type="text" placeholder="Apellido" matInput formControlName="apellido">
+    <input type="number" placeholder="Cedula" matInput formControlName="cedula">
+    <input type="email" placeholder="Email" matInput formControlName="email">
+    <input type="password" placeholder="Password" matInput formControlName="password">
+    <label for="rol">Selecione Un Rol:
+
+      <select name="rol" formControlName="rol">
+        <option value="estudiante">Estudiante</option>
+        <option value="profesor">Profesor</option>
+        <option value="director">director</option>
+      </select>
+    </label>
+
+    <button>Registrarse</button>
+  </form>
+  <button (click)="goBack()" class="return">Return</button>
+</div>
+  </div>
+</div>

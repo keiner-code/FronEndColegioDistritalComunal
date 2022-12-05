@@ -1,0 +1,23 @@
+<div class="table_notas">
+  <table *ngIf="userContent">
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Cedula</th>
+      <th>Rol</th>
+      <th>Accion</th>
+    </tr>
+      <tr>
+        <td>{{userContent.id}}</td>
+        <td>{{userContent.nombre}}</td>
+        <td>{{userContent.apellido}}</td>
+        <td>{{userContent.cedula}}</td>
+        <td>{{userContent.rol}}</td>
+        <td>
+          <button><i class="fa-solid fa-file-pen"></i></button>
+          <button><i class="fa-sharp fa-solid fa-trash"></i></button>
+        </td>
+      </tr>
+  </table>
+</div>

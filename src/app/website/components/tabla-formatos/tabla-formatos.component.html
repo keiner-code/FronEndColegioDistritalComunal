@@ -1,0 +1,89 @@
+ <div class="formato_container">
+  <div class="formato">
+    <div class="formato_search">
+      <img src="https://www.colegioespiritusanto.edu.co/images/pages/logo-educamos.png" alt="">
+      <label>Cedula Del Profesor </label>
+      <input
+        type="number"
+        placeholder="Ingrese La Cedula"
+        #cedula
+      />
+      <button (click)="SearchTeacher(cedula.value)">Ver Materias</button>
+    </div>
+  </div>
+</div>
+
+ <div class="table_formato" *ngIf="tableMateria">
+  <table>
+    <tr>
+      <th>Materia</th>
+      <th>Descripcion</th>
+       <th>Consultar Horario Y Lista De Estudiante</th>
+    </tr>
+
+      <tr *ngFor="let mate of materia">
+        <td>{{mate.materia}}</td>
+        <td>{{mate.descripcion}}</td>
+        <td><button (click)="generateList(mate.id)">Consultar</button></td>
+      </tr>
+  </table>
+</div>
+
+
+<div class="list_estudents" *ngIf="listaEstudiantes">
+  <div class="list_content">
+    <div class="list_header">
+     <div class="list_header_img">
+       <h1>Colegio Distrital Comunal</h1>
+      <img src="https://www.colegioespiritusanto.edu.co/images/logo_titulo.png" alt="">
+     </div>
+      <table>
+        <tr>
+          <th>Nombre Profesor</th>
+          <th>Salon</th>
+          <th>Dia</th>
+          <th>Hora Inicio</th>
+          <th>Hora fin</th>
+        </tr>
+        <tr>
+          <td>{{profesor[0].nombre}} {{profesor[0].apellido}}</td>
+          <td>{{horario[0].curso.nombre}}</td>
+          <td>{{horario[0].dia}}</td>
+          <td>{{horario[0].horaInicio}}</td>
+          <td>{{horario[0].horaFin}}</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <table>
+      <tr>
+          <th> Nombre De Los Alumnos</th>
+          <th></th>
+          <th colspan='12'>Asistencia</th>
+      </tr>
+      <tr *ngFor="let user of users">
+          <td>{{user.nombre}} {{user.apellido}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+  </table>
+</div>
+
+</div>
+
+<div class="generate_List" *ngIf="listaEstudiantes">
+  <div class="generate_button">
+    <button (click)="GeneratePdf()">Generar Lista</button>
+  </div>
+</div>

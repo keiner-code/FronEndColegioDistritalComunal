@@ -1,0 +1,19 @@
+
+	<div class="login-content">
+    <div class="main">
+
+        <div class="login">
+          <form [formGroup]="form" (ngSubmit)="login($event)">
+            <label for="chk" aria-hidden="true">Login</label>
+            <img src="https://www.colegioespiritusanto.edu.co/images/logo_titulo.png" alt="">
+            <input type="email" placeholder="Email"  matInput formControlName="email">
+            <input type="password" placeholder="Password"  matInput formControlName="password">
+            <button [disabled]="form.invalid">Login</button>
+          </form>
+          <div class="register_login">
+            <p>Si Aun No tienes Cuenta !</p>
+            <a routerLink="/home">Click Aqui Para Dirigirte Al Inicio</a>
+          </div>
+        </div>
+    </div>
+  </div>
